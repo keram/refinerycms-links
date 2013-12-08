@@ -1,0 +1,8 @@
+<%
+  # todo use helper
+  resources = Refinery::Resource.page(paginate_page)
+-%>
+<ul class="records ui-selectable">
+  <%= render partial: 'resource', collection: resources %>
+</ul>
+<%= will_paginate resources %>
